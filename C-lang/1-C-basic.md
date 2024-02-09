@@ -153,6 +153,22 @@ The most basic ones:
 |double    |8 bytes       |	Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits | 1.99|
 |char      |1 byte	      | Stores a single character/letter/number, or ASCII values	|'A'|
 
+## Decimal Precision
+
+```C
+#include <stdio.h>
+
+int main() {
+  float myFloatNum = 3.5;
+
+  printf("%f\n", myFloatNum); // Default will show 6 digits after the decimal point
+  printf("%.1f\n", myFloatNum); // Only show 1 digit
+  printf("%.2f\n", myFloatNum); // Only show 2 digits
+  printf("%.4f", myFloatNum);   // Only show 4 digits
+  return 0;
+}
+```
+
 # Basic format specifiers
 |   Format Specifier    |	Data Type |
 |-----------------------|-------------|
@@ -161,3 +177,36 @@ The most basic ones:
 |%lf	                |double	    |
 |   %c	                |   char	|
 |   %s	                | strings (text) |
+
+# Constants
+declare the variable as "constant", which means unchangeable and read-only:
+
+```C
+#include <stdio.h>
+
+int main() {
+  const int myNum = 15;
+  myNum = 10;
+  
+  printf("%d", myNum);
+  return 0;
+}
+```
+
+# Operators
+
+A list of all assignment operators:
+
+| Operator |	Example |	Same As |
+| -------- | ---------| --------|
+|=	       |x = 5	    |x = 5	  |
+|+=	       |	x += 3	|x = x + 3|	
+|-=	       |	x -= 3	|x = x - 3|	
+|*=	       |	x *= 3	|x = x * 3|	
+|/=	       |	x /= 3	|x = x / 3|	
+|%=	       |	x %= 3	|x = x % 3|	
+|&=	       |	x &= 3	|x = x & 3|	
+| |=	     |	x |= 3	|x = x | 3|	
+|^=	       |	x ^= 3	|x = x ^ 3|	
+|>>=	     |	x >>= 3	|x = x >> 3	|
+|<<=	     |	x <<= 3	|x = x << 3|
