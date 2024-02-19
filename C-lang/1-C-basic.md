@@ -195,6 +195,7 @@ int main() {
 
 # Operators
 
+```md
 A list of all assignment operators:
 
 | Operator |	Example |	Same As |
@@ -210,3 +211,140 @@ A list of all assignment operators:
 |^=	       |	x ^= 3	|x = x ^ 3|	
 |>>=	     |	x >>= 3	|x = x >> 3	|
 |<<=	     |	x <<= 3	|x = x << 3|
+```
+
+## Boolean
+You need to import the following header to use *bool* data type:
+```C
+#include <stdbool.h> 
+```
+
+The bool variable will return int, therefore we must use the %d format specifier to print a boolean value:
+
+```C
+#include <stdio.h>
+#include <stdbool.h>  // Import the boolean header file 
+
+int main() {
+  bool isProgrammingFun = true;
+  bool isFishTasty = false;
+  printf("%d\n", isProgrammingFun);  // Returns 1 (true)
+  printf("%d", isFishTasty);         // Returns 0 (false)
+  
+  return 0;
+}
+```
+
+### Boolean Real life example :
+```C
+#include <stdio.h>
+
+int main() {
+  int myAge = 25;
+  int votingAge = 18;
+
+  if (myAge >= votingAge) {
+    printf("Old enough to vote!");
+  } else {
+    printf("Not old enough to vote.");
+  }
+  
+  return 0;
+}
+```
+
+## C If ... Else
+
+List of conditions
+| Conditions |	Example |	Remarks |
+| ---------- | ---------| --------|
+| <          | a < b    | a less than b |
+| <=         | a <= b   | a less or equal to b |
+| >          | a > b    | a greater than b |
+| >=         | a >= b   | a greater or equal to b |
+| ==         | a == b   | a equal to b |
+| !=         | a != b   | a not equal to b |
+
+Example :
+```C
+#include <stdio.h>
+
+int main() {
+  if (20 > 18) {
+    printf("20 is greater than 18");
+  }  
+  return 0;
+}
+```
+
+```C
+#include <stdio.h>
+
+int main() {
+  int x = 20;
+  int y = 18;
+  if (x > y) {
+    printf("x is greater than y");
+  }  
+  return 0;
+}
+```
+
+```C
+#include <stdio.h>
+
+int main() {
+  int time = 20;
+  if (time < 18) {
+    printf("Good day.");
+  } else {
+    printf("Good evening.");
+  }
+  return 0;
+}
+```
+
+```C
+#include <stdio.h>
+
+int main() {
+  int time = 22;
+  if (time < 10) {
+    printf("Good morning.");
+  } else if (time < 20) {
+    printf("Good day.");
+  } else {
+    printf("Good evening.");
+  }
+  return 0;
+}
+```
+
+### Ternary operator
+```C
+#include <stdio.h>
+
+int main() {
+  int time = 20;
+  (time < 18) ? printf("Good day.") : printf("Good evening.");
+  return 0;
+}
+```
+
+### Real Life Examples
+```C
+#include <stdio.h>
+
+int main() {
+  int myAge = 25;
+  int votingAge = 18;
+
+  if (myAge >= votingAge) {
+    printf("Old enough to vote!");
+  } else {
+    printf("Not old enough to vote.");
+  }
+  
+  return 0;
+}
+```
