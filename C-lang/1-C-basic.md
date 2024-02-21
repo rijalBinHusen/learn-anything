@@ -348,3 +348,80 @@ int main() {
   return 0;
 }
 ```
+
+## C Switch
+
+Instead of writing many **if..else** statements, you can use the **switch** statement.
+
+```C
+#include <stdio.h>
+
+int main() {
+  int day = 4;
+  
+  switch (day) {
+  case 1:
+    printf("Monday");
+    break;
+  case 2:
+    printf("Tuesday");
+    break;
+  case 3:
+    printf("Wednesday");
+    break;
+  case 4:
+    printf("Thursday");
+    break;
+  case 5:
+    printf("Friday");
+    break;
+  default:
+    printf("Weekend");
+  }
+  
+  return 0;
+}
+```
+
+## C While Loop
+
+Loops can execute a block of code as long as a specified condition is reached.
+
+Loops are handy because they save time, reduce errors, and they make code more readable.
+
+```C
+#include <stdio.h>
+
+int main() {
+  int i = 0;
+  
+  while (i < 5) {
+    printf("%d\n", i);
+    i++;
+  }
+  
+  return 0;
+}
+```
+
+## C Do/While Loop
+
+The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+```C
+#include <stdio.h>
+
+int main() {
+  int i = 0;
+  
+  do {
+    printf("%d\n", i);
+    i++;
+  }
+  while (i < 5);
+  
+  return 0;
+}
+```
+
+## C For loop
