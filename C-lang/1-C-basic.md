@@ -425,3 +425,59 @@ int main() {
 ```
 
 ## C For loop
+
+```C
+#include <stdio.h>
+
+int main() {
+  int i;
+
+  for (i = 0; i < 100; i++) {
+
+    if(i === 5) continue;
+
+    else if (i  === 20) break;
+    printf("%d\n", i);
+  }
+  
+  return 0;
+}
+```
+
+## C Arrays
+
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
+To create an array, define the data type (like int) and specify the name of the array followed by square brackets [].
+
+To insert values to it, use a comma-separated list, inside curly braces:
+
+```C
+#include <stdio.h>
+
+int main() {
+  int myNumbers[] = {25, 50, 75, 100};
+  printf("%d", myNumbers[0]); // Outputs 25
+ 
+  return 0;
+}
+```
+
+### Loop Through an Array
+
+```C
+#include <stdio.h>
+
+int main() {
+  int myNumbers[] = {25, 50, 75, 100};
+  int i;
+  
+  for (i = 0; i < 4; i++) {
+    printf("%d\n", myNumbers[i]);
+  }
+ 
+  return 0;
+}
+```
+
+## C Array size
